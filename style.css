@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  z-index: -2;
+  background-image: repeating-linear-gradient(
+      112.5deg,
+      hsla(19, 0%, 93%, 0.2) 0px,
+      hsla(19, 0%, 93%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(19, 0%, 93%, 0.2) 1px,
+      hsla(19, 0%, 93%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(19, 0%, 93%, 0.2) 5px,
+      hsla(19, 0%, 93%, 0.2) 8px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(19, 0%, 93%, 0.2) 0px,
+      hsla(19, 0%, 93%, 0.2) 0px,
+      transparent 0px,
+      transparent 1px,
+      hsla(19, 0%, 93%, 0.2) 1px,
+      hsla(19, 0%, 93%, 0.2) 4px,
+      transparent 4px,
+      transparent 5px,
+      hsla(19, 0%, 93%, 0.2) 5px,
+      hsla(19, 0%, 93%, 0.2) 8px
+    ),
+    linear-gradient(135deg, rgb(238, 238, 238), rgb(121, 121, 121));
+}
+.title {
+  margin-top: -100px;
+  text-align: center;
+  color: rgb(184, 255, 255);
+  text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+.img-box {
+  margin-top: -110px;
+  border-radius: 15px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -5px -5px 15px #606060, 5px 5px 10px #848383;
+}
+.img-box::before {
+  position: absolute;
+  z-index: 0;
+  content: "";
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 99%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: 1s;
+}
+.img-box::after {
+  transition: 1s;
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 99%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.img-box:hover::after {
+  transform: rotate(15deg);
+  box-shadow: -5px -5px 15px #606060, 5px 5px 10px #606060;
+}
+.img-box:hover::before {
+  transform: rotate(30deg);
+  box-shadow: -5px -5px 15px #606060, 5px 5px 10px #606060;
+}
+
+img {
+  position: relative;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 5px 5px 15px rgb(39, 39, 39);
+  z-index: 10;
+  cursor: pointer;
+  height: 250px;
+}
+
+img:hover {
+  transform: scale(0.9);
+}
