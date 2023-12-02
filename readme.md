@@ -2,3 +2,4 @@
 
 * An effect is visible when hovering over this image.
 * The image changes when the browser reloads
+* Responsive for all devices
